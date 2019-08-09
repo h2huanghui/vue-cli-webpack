@@ -9,7 +9,17 @@ export default new Router({
     {
       path: '/',
       name: 'HelloWorld',
-      component: HelloWorld
+      component: HelloWorld,
+      children: [
+        {
+          path: '/h1',
+          name: 'H1',
+          component: () => import('@/components/H1.vue')
+        }, {
+          path: '/h2',
+          name: 'H2',
+          component: () => import('@/components/H2.vue')
+        }]
     }
   ]
 })

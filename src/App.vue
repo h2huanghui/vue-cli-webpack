@@ -1,6 +1,11 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
+    <div>
+      <router-link :to="{name: 'HelloWorld'}">主页</router-link>
+      <router-link :to="{name: 'H1'}">H1页面</router-link>
+      <router-link :to="{name: 'H2'}">H2页面</router-link>
+    </div>
     <router-view/>
   </div>
 </template>
