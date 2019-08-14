@@ -4,7 +4,9 @@ import HelloWorld from '@/components/HelloWorld'
 
 Vue.use(Router)
 
+/* 创建router实例 */
 export default new Router({
+  // mode: 'history',
   routes: [
     {
       path: '/',
@@ -20,6 +22,25 @@ export default new Router({
           name: 'H2',
           component: () => import('@/components/H2.vue')
         }]
+    },
+    {
+      path: '/hi1',
+      name: 'hi1',
+      component: () => import('@/components/Hi1.vue')
+    },
+    {
+      path: '/params/:newsId/:newsTitle',
+      component: () => import('@/components/Params.vue')
+    },
+    {
+      path: '/query',
+      name: 'Query',
+      component: () => import('@/components/Query.vue')
+    },
+    {
+      path: '/activity',
+      name: 'Activity',
+      component: () => import('@/components/Activity.vue')
     }
   ]
 })

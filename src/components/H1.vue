@@ -11,6 +11,14 @@ export default {
     return {
       msg: 'I am H1 page,Welcome to H1'
     }
+  },
+  mounted() {
+    /* hash原理;监听hash变化 */
+    window.addEventListener('hashchange', function(e) {
+      console.log(e.oldURL, e.newURL)
+      const hash = location.hash.slice(2)
+      document.body.style.backgroundColor = hash
+    }, false)
   }
 }
 </script>
