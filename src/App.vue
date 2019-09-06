@@ -19,22 +19,22 @@
     <router-view/>
     <p>route name:{{ $route.name }}</p>
 
-    <div class="todo-list">
-      <!-- <div>
+    <!-- <div class="todo-list">
+      <div>
         <el-input v-model="info" placeholder="" type="text" class="info-text" size="mini"/>
         <el-button type="primary" size="mini" @click="handleAdd">Add</el-button>
         <ul>
           <todo-item v-for="(item,index) in list" :item = "item" :key="index"/>
         </ul>
-      </div> -->
+      </div>
 
       <div>
         <el-input v-model="info2" placeholder="" type="text" class="info-text" size="mini"/>
         <el-button type="primary" size="mini" @click="handleAdd2">Add</el-button>
-        <!-- 插槽 -->
+
         <ul>
           <todo-item v-for="(item2,index2) in list2" :key="index2">
-            <!-- 具名插槽 -->
+
             <template v-slot:slot-name-item="slotProps">
               <span :style="{color: slotProps.checked ? 'red': 'green'}">{{ item2 }}</span>
             </template>
@@ -42,7 +42,7 @@
         </ul>
       </div>
 
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -79,7 +79,7 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  /* text-align: center; */
   color: #2c3e50;
   margin-top: 60px;
 }

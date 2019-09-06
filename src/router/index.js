@@ -30,6 +30,7 @@ export default new Router({
     },
     {
       path: '/params/:newsId/:newsTitle',
+      name: 'Params',
       component: () => import('@/components/Params.vue')
     },
     {
