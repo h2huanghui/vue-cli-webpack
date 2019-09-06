@@ -31,6 +31,11 @@ export default new Router({
       component: () => import('@/components/Hi1.vue')
     },
     {
+      path: '/parent',
+      name: 'Parent',
+      component: () => import('@/components/Parent.vue')
+    },
+    {
       path: '/params/:newsId/:newsTitle',
       name: 'Params',
       component: () => import('@/components/Params.vue')
