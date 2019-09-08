@@ -20,12 +20,6 @@ export default new Router({
       //   }]
     },
     {
-      path: '/h1',
-      name: 'H1',
-      component: () => import('@/components/H1.vue')
-
-    },
-    {
       path: '/hi1',
       name: 'hi1',
       component: () => import('@/components/Hi1.vue')
@@ -33,8 +27,21 @@ export default new Router({
     {
       path: '/parent',
       name: 'Parent',
-      component: () => import('@/components/Parent.vue')
+      component: () => import('@/components/Parent.vue'),
+      children: [
+        {
+          path: '/h1',
+          name: 'H1',
+          component: () => import('@/components/H1.vue')
+        },
+        {
+          path: '/h2',
+          name: 'H2',
+          component: () => import('@/components/H2.vue')
+        }
+      ]
     },
+
     {
       path: '/params/:newsId/:newsTitle',
       name: 'Params',

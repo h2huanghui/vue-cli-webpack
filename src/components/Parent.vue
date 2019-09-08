@@ -1,6 +1,16 @@
 <template>
-  <div>主页
-    <router-link :to="{name: 'H1'}">子页面H1</router-link>
-    <router-link :to="{name: 'H2'}">子页面H2</router-link>
+  <div>
+    <h1>{{ msg1 }}</h1>
+    <router-view/>
   </div>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      msg1: 'HHH'
+    }
+  }
+}
+</script>
+

@@ -1,3 +1,3 @@
 <template>
-  <p>username-id: {{ $route.params.username }}-{{ $route.params.id }}</p>
+  <p>username-id: {{ $route.params.userName }}-{{ $route.params.id }}</p>
 </template>
